@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="InputtingNamesCell" customModule="Debate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JJN-xo-MK9">
+                        <rect key="frame" x="20" y="0.0" width="360" height="50"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前を入れてください" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-Ex-qfY">
+                                <rect key="frame" x="0.0" y="8" width="252" height="34"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMD-Uv-QMz">
+                                <rect key="frame" x="288" y="11.5" width="72" height="27"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mCq-Ih-f3c"/>
+                                    <action selector="touchDownAction:" destination="KGk-i7-Jjw" eventType="touchDown" id="exx-Ea-SFB"/>
+                                    <action selector="touchDragExitAction:" destination="KGk-i7-Jjw" eventType="touchDragExit" id="Hp1-Ow-ifQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="x8R-Ex-qfY" firstAttribute="width" secondItem="JJN-xo-MK9" secondAttribute="width" multiplier="7/10" id="CNh-Ko-tGg"/>
+                            <constraint firstItem="dMD-Uv-QMz" firstAttribute="width" secondItem="JJN-xo-MK9" secondAttribute="width" multiplier="0.2" id="j2b-5T-JbV"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="JJN-xo-MK9" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5pu-3H-1Ec"/>
+                    <constraint firstItem="JJN-xo-MK9" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="fny-YI-XKf"/>
+                    <constraint firstItem="JJN-xo-MK9" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="qyj-7U-AII"/>
+                    <constraint firstItem="JJN-xo-MK9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ycE-QG-UkR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="clearButtonOutlet" destination="dMD-Uv-QMz" id="aUX-OY-7zy"/>
+                <outlet property="contentViewOutlet" destination="H2p-sc-9uM" id="g7P-xI-5t9"/>
+                <outlet property="nameOfPlayersField" destination="x8R-Ex-qfY" id="KZl-Qf-Nuh"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
