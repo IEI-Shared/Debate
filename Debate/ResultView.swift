@@ -26,7 +26,6 @@ class ResultViewController: UIViewController, NADViewDelegate {
     lazy var hugeAdView: NADView = {
         let nadView = NADView()
         nadView.delegate = self
-        nadView.setNendID("9d447ab90ba843c04a538f5807c944764b5da721", spotID: "980854")
         nadView.load()
         
         return nadView
@@ -34,7 +33,6 @@ class ResultViewController: UIViewController, NADViewDelegate {
     lazy var smallAdView: NADView = {
         let nadView = NADView(isAdjustAdSize: true)!
         nadView.delegate = self
-        nadView.setNendID("772f09c5616458758e77f4a0f54609b919853fe2", spotID: "980853")
         nadView.load()
         
         return nadView

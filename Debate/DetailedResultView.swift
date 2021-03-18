@@ -23,7 +23,6 @@ class DetailedResultViewController: UIViewController, UITableViewDelegate, UITab
     lazy var smallAdView: NADView = {
         let nadView = NADView(isAdjustAdSize: true)!
         nadView.delegate = self
-        nadView.setNendID("772f09c5616458758e77f4a0f54609b919853fe2", spotID: "980853")
         nadView.load()
         
         return nadView
